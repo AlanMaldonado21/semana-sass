@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1a1a1a;
+}
+
+/*
+
+Sintaxis.
+
+elemento{
+    propiedad: valor;
+}
+
+
+// NESTING o ANIDAMIENTO
+
+*/
+header {
+  padding: 15px;
+  border-bottom: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header img {
+  width: 8rem;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+header nav ul li {
+  margin: 5px;
+}
+header nav ul li a {
+  font-size: 14px;
+  color: white;
+  font-family: Arial;
+  text-decoration: none;
+}
+header .container-plataforma {
+  display: flex;
+  align-items: center;
+}
+header .container-plataforma a {
+  margin-right: 15px;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  font-family: Arial;
+}
+header .container-plataforma img {
+  width: 35px;
+}
+
+@media screen and (min-width: 1024px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.section-container h1 {
+  margin-top: 35px;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.section-container h1 span {
+  color: yellow;
+}
+.section-container h1:hover {
+  background-color: red;
+}
+.section-container p {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.section-botones {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+}
+.section-botones .boton-1, .section-botones a:last-child {
+  background-color: blue;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+  font-family: Arial;
+  border-radius: 5px;
+}
+.section-botones a:last-child {
+  margin-left: 15px;
+}
+
+.mixin-botones {
+  display: flex;
+  justify-content: center;
+}
+.mixin-botones .boton-2 {
+  background-color: red;
+  text-decoration: none;
+  color: white;
+  border-radius: 15px;
+  padding: 10px 25px;
+}
+.mixin-botones .boton-3 {
+  background-color: yellow;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-family: Arial;
+  margin: 25px;
+}
+
+/*# sourceMappingURL=style.css.map */

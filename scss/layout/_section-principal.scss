@@ -1,0 +1,30 @@
+.section-container{
+
+    h1{
+        margin-top: 35px;
+        font-size: 2rem;
+        text-align: center;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        span{
+            color: yellow;
+        }
+        &:hover{
+            background-color: red;
+        }
+    }
+
+    p{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+    }
+
+    // p:last-child{
+    //     color: blue;
+    // }
+
+    // p:nth-child(3){
+    //     color: red;
+    // }
+}

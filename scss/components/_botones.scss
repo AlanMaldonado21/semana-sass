@@ -1,0 +1,22 @@
+@import "../utilities/variables";
+
+.section-botones{
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    .boton-1{
+        background-color: $color-azul;
+        padding: 15px; 
+        color: white;
+        text-decoration: $text-none;
+        font-family: $fuente-principal;
+        border-radius: 5px;
+    }
+
+    a:last-child{
+        @extend .boton-1;
+        margin-left: 15px;
+    
+    }
+
+}
