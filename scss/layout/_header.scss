@@ -1,27 +1,37 @@
 @import "../utilities/variables";
 
-@mixin header-flex($display,$align, $justify){
+@mixin header-flex($display, $align, $justify) {
     display: $display;
     align-items: $align;
     justify-content: $justify;
 }
 
-
-
-header{
+header {
     padding: 15px;
     border-bottom: 1px solid gray;
-    @include header-flex(flex,center,space-around);
-    img{
+    @include header-flex(flex, center, space-around);
+
+    animation-name: cambiarColor;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-delay: 1s;
+
+
+
+    img {
         width: 8rem;
     }
-    nav{
-        ul{
+
+    nav {
+        ul {
             list-style: none;
             display: flex;
-            li{
+
+            li {
                 margin: 5px;
-                a{
+
+                a {
                     font-size: 14px;
                     color: $color-blanco;
                     font-family: $fuente-principal;
@@ -30,26 +40,29 @@ header{
             }
         }
     }
-    .container-plataforma{
+
+    .container-plataforma {
         display: flex;
         align-items: center;
-        a{
+
+        a {
             margin-right: 15px;
             font-size: 14px;
             color: $color-blanco;
             text-decoration: none;
             font-family: $fuente-principal;
         }
-        img{
+
+        img {
             width: 35px;
         }
     }
 }
 
 @media screen and (min-width: 1024px) {
-    
-    header{
-        @include header-flex( flex, center , center)
+
+    header {
+        @include header-flex(flex, center, center)
     }
 
 }

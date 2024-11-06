@@ -5,7 +5,11 @@
     display: flex;
     justify-content: center;
     .boton-1{
-        background-color: $color-azul;
+        // background-image  dirección, color 1 , color 2
+        background: rgb(59,235,42);
+        background: -moz-linear-gradient(317deg, rgba(59,235,42,0.7959558823529411) 3%, rgba(31,245,207,0.8295693277310925) 95%);
+        background: -webkit-linear-gradient(317deg, rgba(59,235,42,0.7959558823529411) 3%, rgba(31,245,207,0.8295693277310925) 95%);
+        background: linear-gradient(317deg, rgba(59,235,42,0.7959558823529411) 3%, rgba(31,245,207,0.8295693277310925) 95%);
         padding: 15px; 
         color: white;
         text-decoration: $text-none;
@@ -14,9 +18,63 @@
     }
 
     a:last-child{
+        background-color: red;
         @extend .boton-1;
         margin-left: 15px;
-    
+        // 
+        background: rgb(245,31,172);
+        background: -moz-linear-gradient(77deg, rgba(245,31,172,0.8295693277310925) 0%, rgba(235,226,42,0.7959558823529411) 81%);
+        background: -webkit-linear-gradient(77deg, rgba(245,31,172,0.8295693277310925) 0%, rgba(235,226,42,0.7959558823529411) 81%);
+        background: linear-gradient(77deg, rgba(245,31,172,0.8295693277310925) 0%, rgba(235,226,42,0.7959558823529411) 81%);
+        transition: 2s;
+        
+        &:hover{
+            transform: translate(120px, 95px) rotate(10deg) skew(15deg) scale(0.5);
+        }
+      
     }
 
+}
+@media screen and (max-width: 560px){
+    body{
+        background-color: red;
+    }
+
+   header{
+       nav{
+           ul{
+               display: none;
+           }
+       }
+       .container-plataforma{
+           a{
+            display: none;
+           }
+       }
+   }
+
+   .section-botones{
+        a:last-child{
+            transform: translate(50px, 95px);
+        }
+   }
+
+   
+}
+
+
+.enlace-img{
+    position: fixed;
+    right: 35px;
+    bottom: 50px;
+    transition: 2s;
+
+
+    animation-name: rotarElemento;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    &:hover{
+        transform: rotate(360deg) translateX(-20px);
+    }
 }

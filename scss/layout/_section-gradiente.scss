@@ -1,0 +1,74 @@
+.container-gradiente {
+    border-radius: 5px;
+    margin: 35px;
+    padding: 25px;
+    background-image: linear-gradient(to right, #F1FD7A, #CFE30D);
+    display: flex;
+
+    div:first-child {
+        width: 350px;
+        margin-right: 35px;
+
+        h3 {
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2.5rem;
+        }
+
+        p {
+            margin-top: 15px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+        }
+    }
+
+    div:last-child {
+        width: 300px;
+        padding: 20px 35px;
+        background-color: #1A1A1A;
+
+        h4 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin: 15px 0;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+        }
+
+        ul {
+            color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+
+            li {
+                margin: 25px 0;
+            }
+        }
+        
+        transform: translateY(40px);
+        box-shadow: -3px 12px 61px -1px rgba(0, 0, 0, 0.53);
+        -webkit-box-shadow: -3px 12px 61px -1px rgba(0, 0, 0, 0.53);
+        -moz-box-shadow: -3px 12px 61px -1px rgba(0, 0, 0, 0.53);
+        border-radius: 5px;
+        transition: 3s;
+        &:hover{
+            transform: rotate(60deg) translateX(100px);
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px){
+    .container-gradiente{
+        div:last-child{
+            &:hover{
+                transform: rotate(0deg) translateX(0px);
+            }
+        }
+    }
+}  

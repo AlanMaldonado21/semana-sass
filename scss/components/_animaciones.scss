@@ -1,0 +1,35 @@
+@keyframes cambiarColor {
+    0%{
+        background-image: linear-gradient(to right, blue, green);
+    }
+
+    50%{
+        background-image: radial-gradient(circle, green, red);
+    }
+
+    100%{
+        background-image: linear-gradient(to left, orange, yellow);
+    }
+}
+
+@keyframes rotarElemento {
+    0%{
+        transform: rotate(0);
+    }
+    
+    25%{
+        transform: rotate(50deg);
+    }
+
+    50%{
+        transform: rotate(30deg);
+    }
+
+    75%{
+        transform: rotate(50deg);
+    }
+
+    100%{
+        transform: rotate(0);
+    }
+}

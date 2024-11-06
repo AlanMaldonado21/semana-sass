@@ -25,6 +25,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  animation-name: cambiarColor;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-delay: 1s;
 }
 header img {
   width: 8rem;
@@ -89,7 +94,10 @@ header .container-plataforma img {
   justify-content: center;
 }
 .section-botones .boton-1, .section-botones a:last-child {
-  background-color: blue;
+  background: rgb(59, 235, 42);
+  background: -moz-linear-gradient(317deg, rgba(59, 235, 42, 0.7959558824) 3%, rgba(31, 245, 207, 0.8295693277) 95%);
+  background: -webkit-linear-gradient(317deg, rgba(59, 235, 42, 0.7959558824) 3%, rgba(31, 245, 207, 0.8295693277) 95%);
+  background: linear-gradient(317deg, rgba(59, 235, 42, 0.7959558824) 3%, rgba(31, 245, 207, 0.8295693277) 95%);
   padding: 15px;
   color: white;
   text-decoration: none;
@@ -97,7 +105,44 @@ header .container-plataforma img {
   border-radius: 5px;
 }
 .section-botones a:last-child {
+  background-color: red;
   margin-left: 15px;
+  background: rgb(245, 31, 172);
+  background: -moz-linear-gradient(77deg, rgba(245, 31, 172, 0.8295693277) 0%, rgba(235, 226, 42, 0.7959558824) 81%);
+  background: -webkit-linear-gradient(77deg, rgba(245, 31, 172, 0.8295693277) 0%, rgba(235, 226, 42, 0.7959558824) 81%);
+  background: linear-gradient(77deg, rgba(245, 31, 172, 0.8295693277) 0%, rgba(235, 226, 42, 0.7959558824) 81%);
+  transition: 2s;
+}
+.section-botones a:last-child:hover {
+  transform: translate(120px, 95px) rotate(10deg) skew(15deg) scale(0.5);
+}
+
+@media screen and (max-width: 560px) {
+  body {
+    background-color: red;
+  }
+  header nav ul {
+    display: none;
+  }
+  header .container-plataforma a {
+    display: none;
+  }
+  .section-botones a:last-child {
+    transform: translate(50px, 95px);
+  }
+}
+.enlace-img {
+  position: fixed;
+  right: 35px;
+  bottom: 50px;
+  transition: 2s;
+  animation-name: rotarElemento;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+}
+.enlace-img:hover {
+  transform: rotate(360deg) translateX(-20px);
 }
 
 .mixin-botones {
@@ -118,6 +163,96 @@ header .container-plataforma img {
   border-radius: 15px;
   font-family: Arial;
   margin: 25px;
+}
+
+.container-gradiente {
+  border-radius: 5px;
+  margin: 35px;
+  padding: 25px;
+  background-image: linear-gradient(to right, #F1FD7A, #CFE30D);
+  display: flex;
+}
+.container-gradiente div:first-child {
+  width: 350px;
+  margin-right: 35px;
+}
+.container-gradiente div:first-child h3 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+}
+.container-gradiente div:first-child p {
+  margin-top: 15px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+.container-gradiente div:last-child {
+  width: 300px;
+  padding: 20px 35px;
+  background-color: #1A1A1A;
+  transform: translateY(40px);
+  box-shadow: -3px 12px 61px -1px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: -3px 12px 61px -1px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: -3px 12px 61px -1px rgba(0, 0, 0, 0.53);
+  border-radius: 5px;
+  transition: 3s;
+}
+.container-gradiente div:last-child h4 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+.container-gradiente div:last-child p {
+  margin: 15px 0;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+.container-gradiente div:last-child ul {
+  color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+.container-gradiente div:last-child ul li {
+  margin: 25px 0;
+}
+.container-gradiente div:last-child:hover {
+  transform: rotate(60deg) translateX(100px);
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  .container-gradiente div:last-child:hover {
+    transform: rotate(0deg) translateX(0px);
+  }
+}
+@keyframes cambiarColor {
+  0% {
+    background-image: linear-gradient(to right, blue, green);
+  }
+  50% {
+    background-image: radial-gradient(circle, green, red);
+  }
+  100% {
+    background-image: linear-gradient(to left, orange, yellow);
+  }
+}
+@keyframes rotarElemento {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(50deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
